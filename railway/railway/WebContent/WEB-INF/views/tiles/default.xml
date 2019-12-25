@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="base-definition" template="/WEB-INF/views/layout/default.jsp">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value="/WEB-INF/views/include/header2.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/views/include/content.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer2.jsp"/>
+	</definition>
+	<definition name="login-definition" template="/WEB-INF/views/layout/defaultlogin.jsp">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value="/WEB-INF/views/include/loginheader.jsp"/>
+		<put-attribute name="content" value=""/>
+		<put-attribute name="footer" value="/WEB-INF/views/include/loginfooter.jsp"/>
+	</definition>
+	<definition name="service-definition" template="/WEB-INF/views/layout/defaultservice.jsp">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value="/WEB-INF/views/include/serviceheader.jsp"/>
+		<put-attribute name="content" value=""/>
+		<put-attribute name="footer" value="/WEB-INF/views/include/servicefooter.jsp"/>
+	</definition>
+	<definition name="index" extends="base-definition">
+		<put-attribute name="title" value="Home"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/index.jsp"/>
+	</definition>
+	<definition name="login" extends="login-definition">
+		<put-attribute name="title" value="Login"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/login.jsp"/>
+	</definition>
+	<definition name="loggedout" extends="login-definition">
+		<put-attribute name="title" value="Loggedout"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/loggedout.jsp"/>
+	</definition>
+	<definition name="createaccount" extends="login-definition">
+		<put-attribute name="title" value="Create Account"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/createaccount.jsp"/>
+	</definition>
+	<definition name="createaccountmessage" extends="base-definition">
+		<put-attribute name="title" value="Created"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/createaccountmessage.jsp"/>
+	</definition>
+	
+	<definition name="routeinfo" extends="service-definition">
+		<put-attribute name="title" value="route"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/routeinfo.jsp"/>
+	</definition>
+	<definition name="gallery" extends="service-definition">
+		<put-attribute name="title" value="Gallery"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/gallery.jsp"/>
+	</definition>
+	<definition name="services" extends="service-definition">
+		<put-attribute name="title" value="services"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/services.jsp"/>
+	</definition>
+	<definition name="addtrain" extends="service-definition">
+		<put-attribute name="title" value="Add train"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/addtrain.jsp"/>
+	</definition>
+	<definition name="trainadded" extends="service-definition">
+		<put-attribute name="title" value="Added trains"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/trainAdded.jsp"/>
+	</definition>
+	
+	
+	<definition name="messageForm" extends="service-definition">
+		<put-attribute name="title" value="Send Message"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/messageform.jsp"/>
+	</definition>
+	
+	
+	<definition name="addstation" extends="service-definition">
+		<put-attribute name="title" value="Add station"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/addstation.jsp"/>
+	</definition>
+	
+	<definition name="addSchedule" extends="service-definition">
+		<put-attribute name="title" value="Add Schedule"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/addSchedule.jsp"/>
+	</definition>
+	
+	<definition name="updatevenue" extends="service-definition">
+		<put-attribute name="title" value="venues"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/updatevenue.jsp"/>
+	</definition>
+	<definition name="updateVenueForm" extends="service-definition">
+		<put-attribute name="title" value="Update Venue"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/updateVenueForm.jsp"/>
+	</definition>
+	
+	<definition name="deletedVenue" extends="service-definition">
+		<put-attribute name="title" value="Deleted"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/deletedVenue.jsp"/>
+	</definition>
+	
+	
+	<definition name="addroute" extends="service-definition">
+		<put-attribute name="title" value="Add diparture"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/addroute.jsp"/>
+	</definition>
+<definition name="profilepage" extends="service-definition">
+		<put-attribute name="title" value="Profile"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/profilepage.jsp"/>
+	</definition>
+	
+	
+	<definition name="search" extends="service-definition">
+		<put-attribute name="title" value="Search"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/search.jsp"/>
+	</definition>
+	<definition name="stations" extends="service-definition">
+		<put-attribute name="title" value="Stations"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/stations.jsp"/>
+	</definition>
+	<definition name="schedule" extends="service-definition">
+		<put-attribute name="title" value="Schedule"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/schedule.jsp"/>
+	</definition>
+	
+	<definition name="contactTrain" extends="service-definition">
+		<put-attribute name="title" value="Contact Train"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/contactTrain.jsp"/>
+	</definition>
+	
+	<definition name="sentMessage" extends="service-definition">
+		<put-attribute name="title" value="sent"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/messageSent.jsp"/>
+	</definition>
+	<definition name="seeMessage" extends="service-definition">
+		<put-attribute name="title" value="Messages"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/seeMessage.jsp"/>
+	</definition>
+	<definition name="ticket" extends="service-definition">
+		<put-attribute name="title" value="Ticket Book"/>
+		<put-attribute name="content" value="/WEB-INF/views/pages/ticket.jsp"/>
+	</definition>
+</tiles-definitions>

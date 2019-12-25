@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.addbook {
+	background: white;
+}
+
+.service_side_scroll {
+	overflow: scroll;
+	width: 1 px;
+	height: 500px;
+}
+
+.service_side_scroll::-webkit-scrollbar {
+	display: none;
+}
+.card{
+	width:20%;
+	float:left;
+	
+}
+a{
+	text-decoration: none;
+}

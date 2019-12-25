@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
+
+<section id="body" class="width">
+	<aside id="sidebar" class="column-left ">
+
+		<header>
+			<h1>
+				<%-- <a href="#"><sec:authentication
+								property="principal.username" /></a> --%>
+			</h1>
+
+			<h2>Welcome to Community!</h2>
+			<h2 class="mt-2"><sec:authorize access="isAuthenticated()">
+				<sec:authentication var="uid" property="principal.username" /> <a href="${pageContext.request.contextPath }/profile?uid=${uid}"><img
+					class="rounded-circle" height="50px" width="50px"
+					src="<c:url value='/locationimages/${uid}/profile/${propic}'></c:url>" /></a>
+			</sec:authorize></h2>
+		</header>
+<div class="service_side_scroll">
+		<nav id="mainnav">
+			<ul>
+				<li class=""><a href="<c:url value='/'></c:url>">Home</a></li>
+				
+				<li><a href="<c:url value='/stations'></c:url>">Station</a></li>
+				<sec:authorize access="isAuthenticated()">
+				<li><a href="<c:url value='/contactTrain'></c:url>">Contact Train</a></li>
+				<li><a href="<c:url value='/seeMessage'></c:url>">See Messages</a></li>
+				<li><a href="<c:url value='/ticket'></c:url>">Ticket</a></li>
+				</sec:authorize>
+				<sec:authorize access="hasRole('ROLE_ADMIN')">
+				<li><a href="<c:url value='/addtrain'></c:url>">Add Train</a></li>
+				<li><a href="<c:url value='/addstation'></c:url>">Add Station</a></li>
+				<li><a href="<c:url value='/addSchedule'></c:url>">Add Schedule</a></li>
+				<li><a href="<c:url value='/addroute'></c:url>">Add Route</a></li>
+				</sec:authorize>
+				<%-- <li><a href="<c:url value='/gallery?uid=${uid }'></c:url>">Gallery</a></li> --%>
+				
+				<%-- <li><a href="<c:url value='/updatestaff'></c:url>">Update staff</a></li>
+				<li><a href="<c:url value='/addvenue'></c:url>">Add Venue</a></li>
+				<li><a href="<c:url value='/updatevenue'></c:url>">Update Venue</a></li> --%>
+			</ul>
+		</nav>
+</div>
+
+
+	</aside>
