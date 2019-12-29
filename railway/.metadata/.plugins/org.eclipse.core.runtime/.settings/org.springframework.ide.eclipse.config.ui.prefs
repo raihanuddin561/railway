@@ -1,0 +1,5 @@
+//com.springsource.config.ui.prefs.activePageIndex\:/OnlineCounseling/src/com/springweb/config/dao-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/OnlineCounseling/src/com/springweb/config/security-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/railway/src/com/spring/railway/config/SpringMvcConfig.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/railway/src/com/spring/railway/config/hibernateConfig.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+eclipse.preferences.version=1

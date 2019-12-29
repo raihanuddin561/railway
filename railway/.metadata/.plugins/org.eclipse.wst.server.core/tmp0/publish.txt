@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Dec 29 23:50:27 BDT 2019
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\DCL\\.m2\\repository\\org\\springframework\\spring-web\\4.3.25.RELEASE\\spring-web-4.3.25.RELEASE.jar=D\:\\sts\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\railway\\WEB-INF\\lib\\spring-web-4.3.25.RELEASE.jar
+org.eclipse.jst.jee.server\:railway=D\:\\sts\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\railway

@@ -35,7 +35,7 @@ public class MessageDaoImpl implements MessageDao {
 	@Transactional
 	public List<Messages> getMessage(String reciever) {
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query<Messages> createQuery = currentSession.createQuery("from messages where receiver=:receiver order by mid desc");
+		Query<Messages> createQuery = currentSession.createQuery("from messages where receiver=:receiver or sender=:receiver order by mid desc");
 		createQuery.setParameter("receiver", reciever);
 		List<Messages> messages = createQuery.getResultList();
 		return messages;

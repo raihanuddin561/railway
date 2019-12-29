@@ -14,13 +14,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.railway.model.Scheduling;
 import com.spring.railway.model.Stations;
+import com.spring.railway.model.Trains;
 import com.spring.railway.service.ScheduleService;
+import com.spring.railway.service.TrainService;
 
 
 @Controller
 public class ScheduleController {
 	@Autowired
 	private ScheduleService scheduleService;
+	@Autowired
+	private TrainService trainService;
 	
 	
 	@RequestMapping("/addSchedule")
@@ -36,6 +40,8 @@ public class ScheduleController {
 				return "redirect:/service";
 			}else {
 				System.out.println("form loading");
+				List<Trains> trainList = trainService.getTrains();
+				model.addAttribute("trainList",trainList);
 				model.addAttribute("scheduling",scheduling);
 				return "addSchedule";
 			}

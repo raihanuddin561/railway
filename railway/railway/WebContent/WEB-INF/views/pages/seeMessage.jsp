@@ -39,6 +39,7 @@
 				<tr>
 					
 					<th>Sender</th>
+					<th>Receiver</th>
 					<th>Message</th>
 					<th>time</th>
 					<th>Option</th>
@@ -49,6 +50,7 @@
 				<c:forEach var="row" items="${messages}">
 					<tr>
 						<td><c:out value="${row.sender}"></c:out></td>
+						<td><c:out value="${row.receiver}"></c:out></td>
 						<td><c:out value="${row.message}"></c:out></td>
 						<td><c:out value="${row.time}"></c:out></td>
 						<td>

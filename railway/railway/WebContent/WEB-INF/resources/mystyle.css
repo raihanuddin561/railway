@@ -7,11 +7,12 @@
 .service_side_scroll {
 	overflow: scroll;
 	width: 1 px;
-	height: 500px;
+	height: 300px;
 }
 
 .service_side_scroll::-webkit-scrollbar {
 	display: none;
+	
 }
 .card{
 	width:20%;

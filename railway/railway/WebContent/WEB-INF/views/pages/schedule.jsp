@@ -39,8 +39,8 @@
 				<tr>
 					
 					<th>Serial No</th>
-					<!-- <th>Train No</th>
-					<th>Train Name</th> -->
+					 <th>Train No</th>
+					<th>Train Name</th> 
 					<th>Starting Station(Time)</th>
 					<th>${stationName }(Time Schedule)</th>
 					<th>Destination(Time)</th>
@@ -51,8 +51,8 @@
 				<c:forEach var="row" items="${schedule}">
 					<tr>
 						<td><c:out value="${row.serial}"></c:out></td>
-						<%-- <td><c:out value="${row.trains.trainNo}"></c:out></td>
-						<td><c:out value="${row.trains.trainName}"></c:out></td> --%>
+						<td><c:out value="${row.trains.trainNo}"></c:out></td>
+						<td><c:out value="${row.trains.trainName}"></c:out></td>
 						<td><c:out value="${row.startingStation}"></c:out></td>
 						<td><c:out value="${row.schedule}"></c:out></td>
 						<td><c:out value="${row.destination}"></c:out></td>
